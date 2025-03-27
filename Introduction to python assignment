@@ -1,0 +1,33 @@
+# Basic Calculator Program
+
+def basic_calculator(num1, num2, operation):
+    # Perform the calculation based on the operation
+    if operation == '+':
+        result = num1 + num2
+        return f"{num1} + {num2} = {result}"
+
+    elif operation == '-':
+        result = num1 - num2
+        return f"{num1} - {num2} = {result}"
+
+    elif operation == '*':
+        result = num1 * num2
+        return f"{num1} * {num2} = {result}"
+
+    elif operation == '/':
+        if num2 != 0:
+            result = num1 / num2
+            return f"{num1} / {num2} = {result}"
+        else:
+            return "Error: Division by zero is not allowed."
+
+    else:
+        return "Error: Invalid operation. Please enter +, -, *, or /."
+
+# Example test cases
+print(basic_calculator(10, 5, '+'))  # Expected: 10 + 5 = 15
+print(basic_calculator(15, 5, '-'))  # Expected: 15 - 5 = 10
+print(basic_calculator(3, 4, '*'))   # Expected: 3 * 4 = 12
+print(basic_calculator(20, 4, '/'))  # Expected: 20 / 4 = 5.0
+print(basic_calculator(10, 0, '/'))  # Expected: Error: Division by zero is not allowed.
+print(basic_calculator(7, 3, '^'))   # Expected: Error: Invalid operation. Please enter +, -, *, or /.
